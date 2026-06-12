@@ -1,0 +1,180 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_property_unit_tree" model="ir.ui.view">
+        <field name="name">property.unit.tree</field>
+        <field name="model">property.unit</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="property_code"/>
+                <field name="property_type"/>
+                <field name="governorate"/>
+                <field name="area"/>
+                <field name="price"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_property_unit_form" model="ir.ui.view">
+        <field name="name">property.unit.form</field>
+        <field name="model">property.unit</field>
+        <field name="arch" type="xml">
+            <form string="Property Unit">
+
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="property_code"/>
+                            <field name="property_type"/>
+                            <field name="status"/>
+                        </group>
+
+                        <group>
+                            <field name="price"/>
+                            <field name="payment_type"/>
+                            <field name="area_size"/>
+                            <field name="floor"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Location">
+
+                            <group>
+                                <field name="governorate"/>
+                                <field name="area"/>
+                                <field name="address"/>
+                            </group>
+
+                        </page>
+
+                        <page string="Notes">
+
+                            <field name="notes"/>
+
+                        </page>
+
+                        <page string="Image">
+
+                            <field name="image" widget="image"/>
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+    <record id="view_property_unit_search" model="ir.ui.view">
+        <field name="name">property.unit.search</field>
+        <field name="model">property.unit</field>
+        <field name="arch" type="xml">
+
+            <search>
+
+                <!-- Search Fields -->
+
+                <field name="property_code"/>
+                <field name="area"/>
+                <field name="price"/>
+
+                <separator/>
+
+                <!-- Filters -->
+
+                <filter
+                        string="Available"
+                        name="available"
+                        domain="[('status','=','available')]"/>
+
+                <filter
+                        string="Reserved"
+                        name="reserved"
+                        domain="[('status','=','reserved')]"/>
+
+                <filter
+                        string="Sold"
+                        name="sold"
+                        domain="[('status','=','sold')]"/>
+
+                <separator/>
+
+                <filter
+                        string="Apartment"
+                        name="apartment"
+                        domain="[('property_type','=','apartment')]"/>
+
+                <filter
+                        string="Villa"
+                        name="villa"
+                        domain="[('property_type','=','villa')]"/>
+
+                <filter
+                        string="Land"
+                        name="land"
+                        domain="[('property_type','=','land')]"/>
+
+                <filter
+                        string="Office"
+                        name="office"
+                        domain="[('property_type','=','office')]"/>
+
+                <filter
+                        string="Shop"
+                        name="shop"
+                        domain="[('property_type','=','shop')]"/>
+
+                <separator/>
+
+                <!-- Group By -->
+
+                <group expand="0" string="Group By">
+
+                    <filter
+                            string="Property Type"
+                            name="group_property_type"
+                            context="{'group_by':'property_type'}"/>
+
+
+                    <filter
+                            string="Status"
+                            name="group_status"
+                            context="{'group_by':'status'}"/>
+
+                    <filter
+                            string="Area"
+                            name="group_area"
+                            context="{'group_by':'area'}"/>
+
+                </group>
+
+            </search>
+
+        </field>
+    </record>
+
+
+    <!-- Action -->
+
+    <record id="action_property_unit" model="ir.actions.act_window">
+        <field name="name">Properties</field>
+        <field name="res_model">property.unit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="menu_property_unit"
+            name="Properties"
+            parent="all_property_unit"
+            action="action_property_unit"
+            sequence="1"/>
+</odoo>

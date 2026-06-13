@@ -10,4 +10,11 @@
             parent="menu_real_estate_root"
 
     />
+
+    <menuitem
+            id="all_property_owners"
+            name="Owners"
+            parent="menu_real_estate_root"
+
+    />
 </odoo>

@@ -8,6 +8,7 @@
         'security/ir.model.access.csv',
         'views/rewad_real_estate_menu.xml',
         'views/property_unit_view.xml',
+        'views/property_owner_view.xml',
 
     ],
     'application': True,

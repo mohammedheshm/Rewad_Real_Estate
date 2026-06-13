@@ -31,3 +31,4 @@ class PropertyUnit(models.Model):
     ], string='Status', default='available')
     notes = fields.Text(string='Notes')
     image = fields.Image(string='Image')
+    owner_id = fields.Many2one('property.owner', string='Owner')

@@ -7,6 +7,7 @@
             <tree>
                 <field name="property_code"/>
                 <field name="property_type"/>
+                <field name="owner_id"/>
                 <field name="governorate"/>
                 <field name="area"/>
                 <field name="price"/>
@@ -29,6 +30,7 @@
                         <group>
                             <field name="property_code"/>
                             <field name="property_type"/>
+                            <field name="owner_id"/>
                             <field name="status"/>
                         </group>
 
@@ -84,6 +86,7 @@
                 <!-- Search Fields -->
 
                 <field name="property_code"/>
+                <field name="owner_id"/>
                 <field name="area"/>
                 <field name="price"/>
 
@@ -144,7 +147,10 @@
                             name="group_property_type"
                             context="{'group_by':'property_type'}"/>
 
-
+                    <filter
+                            string="Owner"
+                            name="group_owner"
+                            context="{'group_by':'owner_id'}"/>
                     <filter
                             string="Status"
                             name="group_status"

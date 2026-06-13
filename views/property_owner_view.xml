@@ -1,0 +1,86 @@
+<odoo>
+    <!-- Tree View -->
+    <record id="view_property_owner_tree" model="ir.ui.view">
+        <field name="name">property.owner.tree</field>
+        <field name="model">property.owner</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="mobile"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View -->
+    <record id="view_property_owner_form" model="ir.ui.view">
+        <field name="name">property.owner.form</field>
+        <field name="model">property.owner</field>
+        <field name="arch" type="xml">
+            <form string="Property Owner">
+
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="mobile"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Properties">
+
+                            <field name="property_ids">
+
+                                <tree editable="bottom">
+                                    <field name="property_code"/>
+                                    <field name="property_type"/>
+                                    <field name="area"/>
+                                    <field name="price"/>
+                                    <field name="status"/>
+                                </tree>
+
+                            </field>
+
+                        </page>
+
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+        </field>
+    </record>
+
+    <!-- Search View -->
+    <record id="view_property_owner_search" model="ir.ui.view">
+        <field name="name">property.owner.search</field>
+        <field name="model">property.owner</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="mobile"/>
+            </search>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_property_owner" model="ir.actions.act_window">
+        <field name="name">Owners</field>
+        <field name="res_model">property.owner</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem
+            id="menu_property_owner"
+            name="Owners"
+            parent="all_property_owners"
+            action="action_property_owner"
+            sequence="2"/>
+</odoo>

@@ -23,15 +23,40 @@
         <field name="model">property.unit</field>
         <field name="arch" type="xml">
             <form string="Property Unit">
+                <header>
+                    <button name="action_reserved"
+                            string="Reserve"
+                            type="object"
+                            class="btn-warning"
+                            invisible="status != 'available'"/>
 
+                    <button name="action_sold"
+                            string="Sell"
+                            type="object"
+                            class="btn-success"
+                            invisible="status != 'reserved'"/>
+
+                    <button name="action_available"
+                            string="Reset"
+                            type="object"
+                            class="btn-secondary"
+                            invisible="status == 'available'"/>
+
+                    <field name="status"
+                           widget="statusbar"
+                           statusbar_visible="available,reserved,sold"/>
+
+                </header>
                 <sheet>
-
+                    <widget name="web_ribbon"
+                            title="SOLD"
+                            bg_color="bg-danger"
+                            invisible="status != 'sold'"/>
                     <group>
                         <group>
                             <field name="property_code"/>
                             <field name="property_type"/>
                             <field name="owner_id"/>
-                            <field name="status"/>
                         </group>
 
                         <group>

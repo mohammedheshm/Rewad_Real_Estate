@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class PropertyUnit(models.Model):
@@ -32,3 +32,18 @@ class PropertyUnit(models.Model):
     notes = fields.Text(string='Notes')
     image = fields.Image(string='Image')
     owner_id = fields.Many2one('property.owner', string='Owner')
+
+    @api.model
+    def create(self, vals):
+        if vals.get('property_code', 'New') == 'New':
+            vals['property_code'] = self.env['ir.sequence'].next_by_code('property_seq')
+        return super(PropertyUnit, self).create(vals)
+
+    def action_available(self):
+        self.status = 'available'
+
+    def action_reserved(self):
+        self.status = 'reserved'
+
+    def action_sold(self):
+        self.status = 'sold'

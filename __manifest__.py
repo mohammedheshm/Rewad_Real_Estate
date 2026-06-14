@@ -6,6 +6,7 @@
     'depends': ['base', 'contacts'],
     'data': [
         'security/ir.model.access.csv',
+        'data/property_sequence.xml',
         'views/rewad_real_estate_menu.xml',
         'views/property_unit_view.xml',
         'views/property_owner_view.xml',

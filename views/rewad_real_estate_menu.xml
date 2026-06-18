@@ -17,4 +17,11 @@
             parent="menu_real_estate_root"
 
     />
+
+    <menuitem
+            id="all_property_Leads"
+            name="Leads"
+            parent="menu_real_estate_root"
+
+    />
 </odoo>

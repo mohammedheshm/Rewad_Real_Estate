@@ -1,0 +1,175 @@
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_property_lead_tree" model="ir.ui.view">
+        <field name="name">property.lead.tree</field>
+        <field name="model">property.lead</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="status == 'interested'"
+                  decoration-danger="status == 'closed'"
+                  decoration-warning="status == 'contacted'">
+
+                <field name="name"/>
+                <field name="mobile"/>
+                <field name="property_type"/>
+                <field name="required_area"/>
+                <field name="budget"/>
+                <field name="status"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_property_lead_form" model="ir.ui.view">
+        <field name="name">property.lead.form</field>
+        <field name="model">property.lead</field>
+        <field name="arch" type="xml">
+
+            <form>
+
+                <header>
+
+                    <button name="action_set_new"
+                            type="object"
+                            string="New"
+                            class="btn-primary"
+                            invisible="status == 'new'"/>
+
+                    <button name="action_set_contacted"
+                            type="object"
+                            string="Contacted"
+                            class="btn-info"
+                            invisible="status == 'contacted'"/>
+
+                    <button name="action_set_interested"
+                            type="object"
+                            string="Interested"
+                            class="btn-success"
+                            invisible="status == 'interested'"/>
+
+                    <button name="action_set_not_interested"
+                            type="object"
+                            string="Not Interested"
+                            class="btn-warning"
+                            invisible="status == 'not_interested'"/>
+
+                    <button name="action_set_closed"
+                            type="object"
+                            string="Closed"
+                            class="btn-danger"
+                            invisible="status == 'closed'"/>
+
+                    <!-- Status Bar (visual only) -->
+                    <field name="status" widget="statusbar"/>
+
+                </header>
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="name"/>
+                            <field name="mobile"/>
+                            <field name="property_type"/>
+                        </group>
+
+                        <group>
+                            <field name="required_area"/>
+                            <field name="budget"/>
+                        </group>
+
+                    </group>
+
+                    <notebook>
+
+                        <page string="Notes">
+                            <field name="notes"/>
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+    <record id="view_property_lead_search" model="ir.ui.view">
+        <field name="name">property.lead.search</field>
+        <field name="model">property.lead</field>
+        <field name="arch" type="xml">
+
+            <search>
+
+                <field name="name"/>
+                <field name="mobile"/>
+                <field name="required_area"/>
+
+                <separator/>
+
+                <filter string="New"
+                        name="new"
+                        domain="[('status','=','new')]"/>
+
+                <filter string="Contacted"
+                        name="contacted"
+                        domain="[('status','=','contacted')]"/>
+
+                <filter string="Interested"
+                        name="interested"
+                        domain="[('status','=','interested')]"/>
+
+                <filter string="Not Interested"
+                        name="not_interested"
+                        domain="[('status','=','not_interested')]"/>
+
+                <filter string="Closed"
+                        name="closed"
+                        domain="[('status','=','closed')]"/>
+
+                <separator/>
+
+                <group expand="0" string="Group By">
+
+                    <filter string="Status"
+                            name="group_status"
+                            context="{'group_by':'status'}"/>
+
+                    <filter string="Property Type"
+                            name="group_property_type"
+                            context="{'group_by':'property_type'}"/>
+
+                    <filter string="Area"
+                            name="group_area"
+                            context="{'group_by':'required_area'}"/>
+
+                </group>
+
+            </search>
+
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="action_property_lead" model="ir.actions.act_window">
+        <field name="name">Leads</field>
+        <field name="res_model">property.lead</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Menu -->
+    <menuitem
+            id="menu_property_lead"
+            name="Leads"
+            parent="all_property_Leads"
+            action="action_property_lead"
+            sequence="3"/>
+
+</odoo>

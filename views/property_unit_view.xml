@@ -9,6 +9,7 @@
                 <field name="property_type"/>
                 <field name="owner_id"/>
                 <field name="governorate"/>
+                <field name="address"/>
                 <field name="area"/>
                 <field name="price"/>
                 <field name="status"/>
@@ -161,6 +162,23 @@
                         name="shop"
                         domain="[('property_type','=','shop')]"/>
 
+                <filter
+                        string="Owner"
+                        name="owner_id"
+                        domain="[('property_type','=','owner_id')]"/>
+
+                <filter string="Price under 1M"
+                        name="under_1m"
+                        domain="[('price','&lt;',1000000)]"/>
+
+                <filter string="Price between 1M - 2M"
+                        name="between_1_2"
+                        domain="[('price','&gt;=',1000000),('price','&lt;=',2000000)]"/>
+
+                <filter string="Price Above 2M"
+                        name="above_2m"
+                        domain="[('price','&gt;',2000000)]"/>
+
                 <separator/>
 
                 <!-- Group By -->
@@ -185,6 +203,23 @@
                             string="Area"
                             name="group_area"
                             context="{'group_by':'area'}"/>
+
+                    <filter
+                            string="Governorate"
+                            name="group_governorate"
+                            context="{'group_by':'governorate'}"/>
+
+
+                    <filter
+                            string="Address"
+                            name="group_address"
+                            context="{'group_by':'address'}"/>
+
+                    <filter
+                            string="Price"
+                            name="group_price"
+                            context="{'group_by':'price'}"/>
+
 
                 </group>
 

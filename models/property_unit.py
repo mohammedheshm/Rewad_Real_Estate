@@ -47,3 +47,12 @@ class PropertyUnit(models.Model):
 
     def action_sold(self):
         self.status = 'sold'
+
+    def open_price_wizard(self):
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Search by Price',
+            'res_model': 'property.price.search.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+        }

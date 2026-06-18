@@ -43,6 +43,12 @@
                             class="btn-secondary"
                             invisible="status == 'available'"/>
 
+                    <button name="open_price_wizard"
+                            type="object"
+                            string="Search by Price"
+                            class="btn-primary"/>
+
+
                     <field name="status"
                            widget="statusbar"
                            statusbar_visible="available,reserved,sold"/>
@@ -229,12 +235,36 @@
     </record>
 
 
+    <!--Search Server  Action -->
+
+    <record id="action_search_by_price_wizard" model="ir.actions.server">
+        <field name="name">Search by Price</field>
+
+        <!-- ⭐ مهم جدًا -->
+        <field name="model_id" ref="model_property_unit"/>
+        <field name="binding_model_id" ref="model_property_unit"/>
+        <field name="binding_type">action</field>
+
+        <field name="state">code</field>
+
+        <field name="code">
+            action = {
+            'type': 'ir.actions.act_window',
+            'name': 'Search by Price',
+            'res_model': 'property.price.search.wizard',
+            'view_mode': 'form',
+            'target': 'new',
+            }
+        </field>
+    </record>
+
     <!-- Action -->
 
     <record id="action_property_unit" model="ir.actions.act_window">
         <field name="name">Properties</field>
         <field name="res_model">property.unit</field>
         <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
     </record>
 
     <menuitem

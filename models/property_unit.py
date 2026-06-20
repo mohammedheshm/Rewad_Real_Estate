@@ -5,6 +5,7 @@ class PropertyUnit(models.Model):
     _name = 'property.unit'
     _description = 'Property Unit'
     _rec_name = 'property_code'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     property_code = fields.Char(string='Property Code', readonly=True, copy=False, default='New')
     property_type = fields.Selection([
@@ -13,25 +14,25 @@ class PropertyUnit(models.Model):
         ('land', 'Land'),
         ('office', 'Office'),
         ('shop', 'Shop')
-    ], string='Property Type')
-    governorate = fields.Char(string='Governorate')
-    area = fields.Char(string='Area')
-    address = fields.Char(string='Address')
-    floor = fields.Char(string='Floor')
-    area_size = fields.Float(string='Area Size (sqm)')
-    price = fields.Float(string='Price')
+    ], string='Property Type', tracking=True)
+    governorate = fields.Char(string='Governorate',tracking=True)
+    area = fields.Char(string='Area',tracking=True)
+    address = fields.Char(string='Address',tracking=True)
+    floor = fields.Char(string='Floor',tracking=True)
+    area_size = fields.Float(string='Area Size (sqm)',tracking=True)
+    price = fields.Float(string='Price',tracking=True)
     payment_type = fields.Selection([
         ('cash', 'Cash'),
         ('installment', 'Installment')
-    ], string='Payment Type')
+    ], string='Payment Type',tracking=True)
     status = fields.Selection([
         ('available', 'Available'),
         ('reserved', 'Reserved'),
-        ('sold', 'Sold')
-    ], string='Status', default='available')
-    notes = fields.Text(string='Notes')
-    image = fields.Image(string='Image')
-    owner_id = fields.Many2one('property.owner', string='Owner')
+        ('sold', 'Sold',)
+    ], string='Status', default='available',tracking=True)
+    notes = fields.Text(string='Notes',tracking=True)
+    image = fields.Image(string='Image',tracking=True)
+    owner_id = fields.Many2one('property.owner', string='Owner',tracking=True)
 
     @api.model
     def create(self, vals):

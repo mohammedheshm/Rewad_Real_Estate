@@ -3,7 +3,7 @@
     'author': "Mohammed Hesham",
     'category': '',
     'version': '17.0.0.1.0',
-    'depends': ['base', 'contacts'],
+    'depends': ['base', 'contacts' , 'mail'],
     'data': [
         'security/ir.model.access.csv',
         'data/property_sequence.xml',

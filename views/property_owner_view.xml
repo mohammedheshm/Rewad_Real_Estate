@@ -17,7 +17,17 @@
         <field name="model">property.owner</field>
         <field name="arch" type="xml">
             <form string="Property Owner">
+                <header>
 
+                    <button name="action_view_properties"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-building">
+
+                        <field name="property_count" widget="statinfo" string="Properties"/>
+                    </button>
+
+                </header>
                 <sheet>
 
                     <group>
@@ -52,7 +62,11 @@
                     </notebook>
 
                 </sheet>
-
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
             </form>
         </field>
     </record>

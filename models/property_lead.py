@@ -6,20 +6,21 @@ class PropertyLead(models.Model):
     _name = 'property.lead'
     _description = 'Property Lead'
     _rec_name = 'name'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
 
     lead_code = fields.Char(string='Lead Code', default='New', readonly=True, copy=False)
-    name = fields.Char(string='Customer Name', required=True)
-    mobile = fields.Char(string='Mobile Number', required=True)
+    name = fields.Char(string='Customer Name', required=True, tracking=True)
+    mobile = fields.Char(string='Mobile Number', required=True, tracking=True)
     property_type = fields.Selection([
         ('apartment', 'Apartment'),
         ('villa', 'Villa'),
         ('land', 'Land'),
         ('office', 'Office'),
         ('shop', 'Shop')
-    ], string='Required Property Type')
+    ], string='Required Property Type', tracking=True)
 
-    required_area = fields.Char(string='Required Area')
-    budget = fields.Float(string='Budget')
+    required_area = fields.Char(string='Required Area', tracking=True)
+    budget = fields.Float(string='Budget', tracking=True)
 
     status = fields.Selection([
         ('new', 'New'),
@@ -27,19 +28,21 @@ class PropertyLead(models.Model):
         ('interested', 'Interested'),
         ('not_interested', 'Not Interested'),
         ('closed', 'Closed')
-    ], string='Lead Status', default='new')
+    ], string='Lead Status', default='new', tracking=True)
 
-    notes = fields.Text(string='Notes')
+    notes = fields.Text(string='Notes', tracking=True)
 
     followup_ids = fields.One2many(
         'property.followup',
         'lead_id',
-        string='Follow Ups'
+        string='Follow Ups',
+        tracking=True
     )
 
     property_unit_id = fields.Many2one(
         'property.unit',
-        string='Selected Property'
+        string='Selected Property',
+        tracking=True
     )
 
     def action_set_new(self):
@@ -83,3 +86,13 @@ class PropertyLead(models.Model):
                 return
 
             raise UserError("Invalid property status.")
+
+    def action_open_property(self):
+        self.ensure_one()
+        return {
+            'type': 'ir.actions.act_window',
+            'name': 'Property',
+            'res_model': 'property.unit',
+            'view_mode': 'form',
+            'res_id': self.property_unit_id.id,
+        }

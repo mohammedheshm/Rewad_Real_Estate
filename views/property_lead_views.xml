@@ -61,7 +61,6 @@
                             class="btn-danger"
                             invisible="status == 'closed'"/>
 
-                    <!-- Status Bar (visual only) -->
                     <field name="status" widget="statusbar"/>
 
                 </header>

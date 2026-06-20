@@ -46,8 +46,8 @@
                     <button name="open_price_wizard"
                             type="object"
                             string="Search by Price"
-                            class="btn-primary"/>
-
+                            class="oe_highlight"
+                            icon="fa-search"/>
 
                     <field name="status"
                            widget="statusbar"

@@ -6,7 +6,7 @@ class PropertyUnit(models.Model):
     _description = 'Property Unit'
     _rec_name = 'property_code'
 
-    property_code = fields.Char(string='Property Code', required=True, copy=False, default='New')
+    property_code = fields.Char(string='Property Code', readonly=True, copy=False, default='New')
     property_type = fields.Selection([
         ('apartment', 'Apartment'),
         ('villa', 'Villa'),

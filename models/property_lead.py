@@ -6,6 +6,7 @@ class PropertyLead(models.Model):
     _description = 'Property Lead'
     _rec_name = 'name'
 
+    lead_code = fields.Char(string='Lead Code', default='New', readonly=True, copy=False)
     name = fields.Char(string='Customer Name', required=True)
     mobile = fields.Char(string='Mobile Number', required=True)
     property_type = fields.Selection([
@@ -43,3 +44,9 @@ class PropertyLead(models.Model):
 
     def action_set_closed(self):
         self.status = 'closed'
+
+    @api.model
+    def create(self, vals):
+        if vals.get('lead_code', 'New') == 'New':
+            vals['lead_code'] = self.env['ir.sequence'].next_by_code('lead_seq')
+        return super(PropertyLead, self).create(vals)

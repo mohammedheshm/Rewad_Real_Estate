@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="lead_sequence" model="ir.sequence">
+            <field name="name">Lead Seq.</field>
+            <field name="code">lead_seq</field>
+            <field name="prefix">LEAD</field>
+            <field name="padding">5</field>
+        </record>
+    </data>
+</odoo>

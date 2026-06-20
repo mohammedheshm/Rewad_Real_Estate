@@ -69,6 +69,7 @@
                     <group>
 
                         <group>
+                            <field name="lead_code"/>
                             <field name="name"/>
                             <field name="mobile"/>
                             <field name="property_type"/>

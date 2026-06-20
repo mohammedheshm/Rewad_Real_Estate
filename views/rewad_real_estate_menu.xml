@@ -24,4 +24,11 @@
             parent="menu_real_estate_root"
 
     />
+
+      <menuitem
+            id="all_property_followup"
+            name="Follow Ups"
+            parent="menu_real_estate_root"
+
+    />
 </odoo>

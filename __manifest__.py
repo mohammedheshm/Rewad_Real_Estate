@@ -12,6 +12,7 @@
         'views/property_unit_view.xml',
         'views/property_owner_view.xml',
         'views/property_lead_views.xml',
+        'views/property_followup_views.xml',
         'wizard/price_search_wizard_view.xml',
 
     ],

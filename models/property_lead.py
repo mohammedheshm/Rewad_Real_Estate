@@ -1,4 +1,5 @@
 from odoo import api, fields, models
+from odoo.exceptions import UserError
 
 
 class PropertyLead(models.Model):
@@ -30,6 +31,17 @@ class PropertyLead(models.Model):
 
     notes = fields.Text(string='Notes')
 
+    followup_ids = fields.One2many(
+        'property.followup',
+        'lead_id',
+        string='Follow Ups'
+    )
+
+    property_unit_id = fields.Many2one(
+        'property.unit',
+        string='Selected Property'
+    )
+
     def action_set_new(self):
         self.status = 'new'
 
@@ -50,3 +62,24 @@ class PropertyLead(models.Model):
         if vals.get('lead_code', 'New') == 'New':
             vals['lead_code'] = self.env['ir.sequence'].next_by_code('lead_seq')
         return super(PropertyLead, self).create(vals)
+
+    def action_mark_as_sold(self):
+        for rec in self:
+
+            if not rec.property_unit_id:
+                raise UserError("Please select a property first.")
+
+            property_unit = rec.property_unit_id
+
+            if property_unit.status == 'sold':
+                raise UserError("Sorry, this property is already SOLD.")
+
+            if property_unit.status == 'reserved':
+                raise UserError("Sorry, this property is RESERVED and cannot be sold directly.")
+
+            if property_unit.status == 'available':
+                property_unit.status = 'sold'
+                rec.status = 'closed'
+                return
+
+            raise UserError("Invalid property status.")

@@ -61,6 +61,12 @@
                             class="btn-danger"
                             invisible="status == 'closed'"/>
 
+                    <button name="action_mark_as_sold"
+                            type="object"
+                            string="Mark As Sold"
+                            class="btn-primary"
+                            invisible="not property_unit_id or status == 'closed'"/>
+
                     <field name="status" widget="statusbar"/>
 
                 </header>
@@ -78,18 +84,28 @@
                         <group>
                             <field name="required_area"/>
                             <field name="budget"/>
+                            <field name="property_unit_id"/>
                         </group>
 
                     </group>
 
                     <notebook>
 
+                        <page string="Follow Ups">
+                            <field name="followup_ids">
+                                <tree editable="bottom">
+                                    <field name="follow_up_date"/>
+                                    <field name="next_follow_up_date"/>
+                                    <field name="follow_up_notes"/>
+                                </tree>
+                            </field>
+                        </page>
+
                         <page string="Notes">
                             <field name="notes"/>
                         </page>
 
                     </notebook>
-
                 </sheet>
 
             </form>

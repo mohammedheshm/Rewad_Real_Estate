@@ -1,0 +1,98 @@
+<odoo>
+
+    <!-- Tree View -->
+    <record id="view_property_followup_tree" model="ir.ui.view">
+        <field name="name">property.followup.tree</field>
+        <field name="model">property.followup</field>
+        <field name="arch" type="xml">
+
+            <tree>
+                <field name="lead_id"/>
+                <field name="follow_up_date"/>
+                <field name="next_follow_up_date"/>
+            </tree>
+
+        </field>
+    </record>
+
+
+    <!-- Form View -->
+    <record id="view_property_followup_form" model="ir.ui.view">
+        <field name="name">property.followup.form</field>
+        <field name="model">property.followup</field>
+        <field name="arch" type="xml">
+
+            <form>
+
+                <sheet>
+
+                    <group>
+
+                        <group>
+                            <field name="lead_id"/>
+                            <field name="follow_up_date"/>
+                        </group>
+
+                        <group>
+                            <field name="next_follow_up_date"/>
+                        </group>
+
+                    </group>
+
+                    <group>
+                        <field name="follow_up_notes"/>
+                    </group>
+
+                </sheet>
+
+            </form>
+
+        </field>
+    </record>
+
+
+    <!-- Search View -->
+    <record id="view_property_followup_search" model="ir.ui.view">
+        <field name="name">property.followup.search</field>
+        <field name="model">property.followup</field>
+        <field name="arch" type="xml">
+
+            <search>
+
+                <field name="lead_id"/>
+
+                <filter string="Today"
+                        name="today"
+                        domain="[('follow_up_date','=',context_today())]"/>
+
+                <group expand="0" string="Group By">
+
+                    <filter string="Lead"
+                            name="group_lead"
+                            context="{'group_by':'lead_id'}"/>
+
+                </group>
+
+            </search>
+
+        </field>
+    </record>
+
+
+    <!-- Action -->
+    <record id="action_property_followup" model="ir.actions.act_window">
+        <field name="name">Follow Ups</field>
+        <field name="res_model">property.followup</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Menu -->
+    <menuitem
+            id="menu_property_followup"
+            name="Follow Ups"
+            parent="all_property_followup"
+            action="action_property_followup"
+            sequence="4"/>
+
+</odoo>

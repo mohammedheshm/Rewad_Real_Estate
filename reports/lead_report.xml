@@ -1,0 +1,81 @@
+<odoo>
+
+    <record id="action_lead_report" model="ir.actions.report">
+        <field name="name">Lead Report</field>
+        <field name="model">property.lead</field>
+        <field name="report_type">qweb-html</field>
+        <!-- <field name="report_type">qweb-pdf</field> -->
+        <field name="binding_model_id" ref="model_property_lead"/>
+        <field name="binding_type">report</field>
+        <field name="report_name">rewad_real_estate.lead_report_template</field>
+    </record>
+
+    <template id="lead_report_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <div class="page">
+                        <h2 style="text-align:center;">Lead Report</h2>
+
+                        <br/>
+
+                        <table class="table table-sm table-bordered">
+                            <tr>
+                                <th>Lead Code</th>
+                                <td>
+                                    <span t-field="o.lead_code"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Customer Name</th>
+                                <td>
+                                    <span t-field="o.name"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Mobile</th>
+                                <td>
+                                    <span t-field="o.mobile"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Property Type</th>
+                                <td>
+                                    <span t-field="o.property_type"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Required Area</th>
+                                <td>
+                                    <span t-field="o.required_area"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Budget</th>
+                                <td>
+                                    <span t-field="o.budget"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Status</th>
+                                <td>
+                                    <span t-field="o.status"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Selected Property</th>
+                                <td>
+                                    <span t-field="o.property_unit_id"/>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

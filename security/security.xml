@@ -1,0 +1,31 @@
+<odoo>
+
+    <!-- MODULE CATEGORY -->
+    <record id="module_category_real_estate" model="ir.module.category">
+        <field name="name">Real Estate Management</field>
+        <field name="description">Security access control for real estate system</field>
+    </record>
+
+
+    <!-- ADMIN -->
+    <record id="group_real_estate_admin" model="res.groups">
+        <field name="name">Administration</field>
+        <field name="category_id" ref="module_category_real_estate"/>
+    </record>
+
+
+    <!-- SALES -->
+    <record id="group_real_estate_sales" model="res.groups">
+        <field name="name">Sales Agent</field>
+        <field name="category_id" ref="module_category_real_estate"/>
+    </record>
+
+
+    <!-- ACCOUNTANT -->
+    <record id="group_real_estate_accountant" model="res.groups">
+        <field name="name">Accountant</field>
+        <field name="category_id" ref="module_category_real_estate"/>
+    </record>
+
+
+</odoo>

@@ -1,6 +1,27 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_property_unit,access_property_unit,model_property_unit,,1,1,1,1
-access_property_owner,access_property_owner,model_property_owner,,1,1,1,1
-access_property_lead,access_property_lead,model_property_lead,,1,1,1,1
-access_property_followup,access_property_followup,model_property_followup,,1,1,1,1
-access_property_price_search_wizard,access_property_price_search_wizard,model_property_price_search_wizard,,1,1,1,1
+
+
+access_property_unit_admin,property.unit admin,model_property_unit,group_real_estate_admin,1,1,1,1
+access_property_unit_sales,property.unit sales,model_property_unit,group_real_estate_sales,1,1,1,0
+access_property_unit_accountant,property.unit accountant,model_property_unit,group_real_estate_accountant,1,0,0,0
+
+
+access_property_owner_admin,property.owner admin,model_property_owner,group_real_estate_admin,1,1,1,1
+access_property_owner_sales,property.owner sales,model_property_owner,group_real_estate_sales,1,1,1,0
+access_property_owner_accountant,property.owner accountant,model_property_owner,group_real_estate_accountant,1,0,0,0
+
+
+
+access_property_lead_admin,property.lead admin,model_property_lead,group_real_estate_admin,1,1,1,1
+access_property_lead_sales,property.lead sales,model_property_lead,group_real_estate_sales,1,1,1,0
+access_property_lead_accountant,property.lead accountant,model_property_lead,group_real_estate_accountant,1,0,0,0
+
+
+access_property_followup_admin,property.followup admin,model_property_followup,group_real_estate_admin,1,1,1,1
+access_property_followup_sales,property.followup sales,model_property_followup,group_real_estate_sales,1,1,1,0
+access_property_followup_accountant,property.followup accountant,model_property_followup,group_real_estate_accountant,1,0,0,0
+
+
+access_property_price_search_wizard_admin,property.price wizard admin,model_property_price_search_wizard,group_real_estate_admin,1,1,1,1
+access_property_price_search_wizard_sales,property.price wizard sales,model_property_price_search_wizard,group_real_estate_sales,1,1,1,1
+access_property_price_search_wizard_accountant,property.price wizard accountant,model_property_price_search_wizard,group_real_estate_accountant,1,0,0,0

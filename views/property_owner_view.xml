@@ -46,7 +46,6 @@
                                 <tree editable="bottom">
                                     <field name="property_code"/>
                                     <field name="property_type"/>
-                                    <field name="area"/>
                                     <field name="price"/>
                                     <field name="status"/>
                                 </tree>

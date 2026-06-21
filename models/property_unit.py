@@ -16,7 +16,6 @@ class PropertyUnit(models.Model):
         ('shop', 'Shop')
     ], string='Property Type', tracking=True)
     governorate = fields.Char(string='Governorate',tracking=True)
-    area = fields.Char(string='Area',tracking=True)
     address = fields.Char(string='Address',tracking=True)
     floor = fields.Char(string='Floor',tracking=True)
     area_size = fields.Float(string='Area Size (sqm)',tracking=True)

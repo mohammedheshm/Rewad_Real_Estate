@@ -10,7 +10,7 @@
                 <field name="owner_id"/>
                 <field name="governorate"/>
                 <field name="address"/>
-                <field name="area"/>
+                <field name="area_size"/>
                 <field name="price"/>
                 <field name="status"/>
             </tree>
@@ -80,7 +80,6 @@
 
                             <group>
                                 <field name="governorate"/>
-                                <field name="area"/>
                                 <field name="address"/>
                             </group>
 
@@ -123,7 +122,6 @@
 
                 <field name="property_code"/>
                 <field name="owner_id"/>
-                <field name="area"/>
                 <field name="price"/>
 
                 <separator/>
@@ -209,10 +207,6 @@
                             name="group_status"
                             context="{'group_by':'status'}"/>
 
-                    <filter
-                            string="Area"
-                            name="group_area"
-                            context="{'group_by':'area'}"/>
 
                     <filter
                             string="Governorate"

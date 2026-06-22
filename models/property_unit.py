@@ -1,4 +1,5 @@
 from odoo import fields, models, api
+from odoo.exceptions import ValidationError
 
 
 class PropertyUnit(models.Model):
@@ -15,23 +16,45 @@ class PropertyUnit(models.Model):
         ('office', 'Office'),
         ('shop', 'Shop')
     ], string='Property Type', tracking=True)
-    governorate = fields.Char(string='Governorate',tracking=True)
-    address = fields.Char(string='Address',tracking=True)
-    floor = fields.Char(string='Floor',tracking=True)
-    area_size = fields.Float(string='Area Size (sqm)',tracking=True)
-    price = fields.Float(string='Price',tracking=True)
+    governorate = fields.Char(string='Governorate', tracking=True)
+    address = fields.Char(string='Address', tracking=True)
+    floor = fields.Char(string='Floor', tracking=True)
+    area_size = fields.Float(string='Area Size (sqm)', tracking=True)
+    price = fields.Float(string='Price', tracking=True)
     payment_type = fields.Selection([
         ('cash', 'Cash'),
         ('installment', 'Installment')
-    ], string='Payment Type',tracking=True)
+    ], string='Payment Type', tracking=True)
     status = fields.Selection([
         ('available', 'Available'),
         ('reserved', 'Reserved'),
         ('sold', 'Sold',)
-    ], string='Status', default='available',tracking=True)
-    notes = fields.Text(string='Notes',tracking=True)
-    image = fields.Image(string='Image',tracking=True)
-    owner_id = fields.Many2one('property.owner', string='Owner',tracking=True)
+    ], string='Status', default='available', tracking=True)
+    notes = fields.Text(string='Notes', tracking=True)
+    image = fields.Image(string='Image', tracking=True)
+    owner_id = fields.Many2one('property.owner', string='Owner', tracking=True)
+
+    _sql_constraints = [
+        ('unique_property_code',
+         'unique(property_code)',
+         'Property code must be unique!')
+    ]
+
+    @api.constrains('address', 'floor', 'area_size')
+    def _check_duplicate(self):
+        for rec in self:
+
+            duplicate = self.search([
+                ('address', '=', rec.address),
+                ('floor', '=', rec.floor),
+                ('area_size', '=', rec.area_size),
+                ('id', '!=', rec.id),
+            ], limit=1)
+
+            if duplicate:
+                raise ValidationError(
+                    "⚠️ Similar property already exists. Please check existing records."
+                )
 
     @api.model
     def create(self, vals):

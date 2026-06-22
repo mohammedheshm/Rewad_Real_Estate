@@ -4,108 +4,106 @@
         <field name="name">Property Report</field>
         <field name="model">property.unit</field>
         <field name="report_type">qweb-html</field>
-        <!-- <field name="report_type">qweb-pdf</field> -->
         <field name="binding_model_id" ref="model_property_unit"/>
         <field name="binding_type">report</field>
         <field name="report_name">rewad_real_estate.property_report_template</field>
     </record>
 
+
     <template id="property_report_template">
+
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
-                <t t-call="web.external_layout">
+            <t t-call="web.external_layout">
 
-                    <div class="page">
-                        <h2 style="text-align:center;">Property Report</h2>
+                <div class="page">
 
-                        <br/>
+                    <h2 style="text-align:center;">
+                        Property Report
+                    </h2>
 
-                        <table class="table table-sm">
+                    <br/>
 
-                            <tr>
-                                <th>Property Code</th>
+                    <table class="table table-bordered table-sm">
+
+                        <thead>
+                            <tr style="background-color:#f2f2f2;">
+                                <th>Code</th>
+                                <th>Type</th>
+                                <th>Owner</th>
+                                <th>Governorate</th>
+                                <th>Address</th>
+                                <th>Floor</th>
+                                <th>Area</th>
+                                <th>Price</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr t-foreach="docs" t-as="o">
+
                                 <td>
                                     <span t-field="o.property_code"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Property Type</th>
                                 <td>
                                     <span t-field="o.property_type"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Owner</th>
                                 <td>
-                                    <span t-field="o.owner_id"/>
+                                    <span t-field="o.owner_id.name"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Governorate</th>
                                 <td>
                                     <span t-field="o.governorate"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Address</th>
                                 <td>
                                     <span t-field="o.address"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Floor</th>
                                 <td>
                                     <span t-field="o.floor"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Area Size (sqm)</th>
                                 <td>
                                     <span t-field="o.area_size"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Price</th>
                                 <td>
                                     <span t-field="o.price"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Payment Type</th>
                                 <td>
                                     <span t-field="o.payment_type"/>
                                 </td>
-                            </tr>
 
-                            <tr>
-                                <th>Status</th>
                                 <td>
                                     <span t-field="o.status"/>
                                 </td>
+
                             </tr>
 
-                            <tr>
-                                <th>Notes</th>
-                                <td>
-                                    <span t-field="o.notes"/>
-                                </td>
-                            </tr>
+                        </tbody>
 
-                        </table>
+                    </table>
 
+                    <br/>
+
+                    <div style="text-align:right;">
+                        <strong>
+                            Total Properties:
+                            <span t-esc="len(docs)"/>
+                        </strong>
                     </div>
 
-                </t>
+                </div>
+
             </t>
         </t>
+
     </template>
 
 </odoo>

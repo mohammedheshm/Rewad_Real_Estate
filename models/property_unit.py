@@ -16,8 +16,13 @@ class PropertyUnit(models.Model):
         ('office', 'Office'),
         ('shop', 'Shop')
     ], string='Property Type', tracking=True)
-    governorate = fields.Char(string='Governorate', tracking=True)
-    address = fields.Char(string='Address', tracking=True)
+    # governorate = fields.Char(string='Governorate', tracking=True)
+    # address = fields.Char(string='Address', tracking=True)
+
+    governorate_id = fields.Many2one('property.location', string='Governorate', domain=[('type', '=', 'governorate')])
+
+    address_id = fields.Many2one('property.location', string='Address', domain=[('type', '=', 'address')])
+
     floor = fields.Char(string='Floor', tracking=True)
     area_size = fields.Float(string='Area Size (sqm)', tracking=True)
     price = fields.Float(string='Price', tracking=True)
@@ -40,12 +45,12 @@ class PropertyUnit(models.Model):
          'Property code must be unique!')
     ]
 
-    @api.constrains('address', 'floor', 'area_size')
+    @api.constrains('address_id', 'floor', 'area_size')
     def _check_duplicate(self):
         for rec in self:
 
             duplicate = self.search([
-                ('address', '=', rec.address),
+                ('address_id', '=', rec.address_id.id),
                 ('floor', '=', rec.floor),
                 ('area_size', '=', rec.area_size),
                 ('id', '!=', rec.id),
@@ -56,11 +61,49 @@ class PropertyUnit(models.Model):
                     "⚠️ Similar property already exists. Please check existing records."
                 )
 
-    @api.model
-    def create(self, vals):
-        if vals.get('property_code', 'New') == 'New':
-            vals['property_code'] = self.env['ir.sequence'].next_by_code('property_seq')
-        return super(PropertyUnit, self).create(vals)
+    @api.model_create_multi
+    def create(self, vals_list):
+
+        for vals in vals_list:
+
+            if vals.get('property_code', 'New') == 'New':
+                vals['property_code'] = self.env['ir.sequence'].next_by_code('property_seq')
+
+            if vals.get('governorate_id') and isinstance(vals['governorate_id'], str):
+
+                name = vals['governorate_id']
+
+                loc = self.env['property.location'].search([
+                    ('name', '=', name),
+                    ('type', '=', 'governorate')
+                ], limit=1)
+
+                if not loc:
+                    loc = self.env['property.location'].create({
+                        'name': name,
+                        'type': 'governorate'
+                    })
+
+                vals['governorate_id'] = loc.id
+
+            if vals.get('address_id') and isinstance(vals['address_id'], str):
+
+                name = vals['address_id']
+
+                loc = self.env['property.location'].search([
+                    ('name', '=', name),
+                    ('type', '=', 'address')
+                ], limit=1)
+
+                if not loc:
+                    loc = self.env['property.location'].create({
+                        'name': name,
+                        'type': 'address'
+                    })
+
+                vals['address_id'] = loc.id
+
+        return super(PropertyUnit, self).create(vals_list)
 
     def action_available(self):
         self.status = 'available'

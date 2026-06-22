@@ -25,3 +25,8 @@ access_property_followup_accountant,property.followup accountant,model_property_
 access_property_price_search_wizard_admin,property.price wizard admin,model_property_price_search_wizard,group_real_estate_admin,1,1,1,1
 access_property_price_search_wizard_sales,property.price wizard sales,model_property_price_search_wizard,group_real_estate_sales,1,1,1,1
 access_property_price_search_wizard_accountant,property.price wizard accountant,model_property_price_search_wizard,group_real_estate_accountant,1,0,0,0
+
+
+access_property_location_admin,property.location admin,model_property_location,group_real_estate_admin,1,1,1,1
+access_property_location_sales,property.location sales,model_property_location,group_real_estate_sales,1,1,0,0
+access_property_location_accountant,property.location accountant,model_property_location,group_real_estate_accountant,1,0,0,0

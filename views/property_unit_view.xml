@@ -8,8 +8,8 @@
                 <field name="property_code"/>
                 <field name="property_type"/>
                 <field name="owner_id"/>
-                <field name="governorate"/>
-                <field name="address"/>
+                <field name="governorate_id"/>
+                <field name="address_id"/>
                 <field name="area_size"/>
                 <field name="price"/>
                 <field name="status"/>
@@ -79,8 +79,8 @@
                         <page string="Location">
 
                             <group>
-                                <field name="governorate"/>
-                                <field name="address"/>
+                                <field name="governorate_id"/>
+                                <field name="address_id"/>
                             </group>
 
                         </page>
@@ -211,13 +211,13 @@
                     <filter
                             string="Governorate"
                             name="group_governorate"
-                            context="{'group_by':'governorate'}"/>
+                            context="{'group_by':'governorate_id'}"/>
 
 
                     <filter
                             string="Address"
                             name="group_address"
-                            context="{'group_by':'address'}"/>
+                            context="{'group_by':'address_id'}"/>
 
                     <filter
                             string="Price"

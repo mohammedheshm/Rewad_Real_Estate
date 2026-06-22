@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import fields, models, api
 
 
 class PropertyOwner(models.Model):
@@ -7,12 +7,46 @@ class PropertyOwner(models.Model):
     _rec_name = 'name'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
-    name = fields.Char(string='Owner Name', required=True,tracking=True)
-    mobile = fields.Char(string='Mobile Number',tracking=True)
-    notes = fields.Text(string='Notes',tracking=True)
-    property_ids = fields.One2many('property.unit', 'owner_id', string='Properties',tracking=True)
+    name = fields.Char(string='Owner Name', required=True, tracking=True)
+    mobile = fields.Char(string='Mobile Number', tracking=True)
+    notes = fields.Text(string='Notes', tracking=True)
+    property_ids = fields.One2many('property.unit', 'owner_id', string='Properties', tracking=True)
 
-    property_count = fields.Integer(compute="_compute_property_count",tracking=True)
+    property_count = fields.Integer(compute="_compute_property_count", tracking=True)
+
+    total_value = fields.Float(
+        string="Total Properties Value",
+        compute="_compute_totals",
+        store=True
+    )
+
+    total_paid = fields.Float(
+        string="Total Paid",
+        compute="_compute_totals",
+        store=True
+    )
+
+    total_remaining = fields.Float(
+        string="Total Remaining",
+        compute="_compute_totals",
+        store=True
+    )
+
+    total_commission = fields.Float(
+        string="Total Commission",
+        compute="_compute_totals",
+        store=True
+    )
+
+    @api.depends('property_ids.owner_price',
+                 'property_ids.paid_to_owner',
+                 'property_ids.commission')
+    def _compute_totals(self):
+        for rec in self:
+            rec.total_value = sum(rec.property_ids.mapped('owner_price'))
+            rec.total_paid = sum(rec.property_ids.mapped('paid_to_owner'))
+            rec.total_commission = sum(rec.property_ids.mapped('commission'))
+            rec.total_remaining = rec.total_value - rec.total_paid
 
     def _compute_property_count(self):
         for rec in self:

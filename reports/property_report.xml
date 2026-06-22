@@ -27,6 +27,7 @@
 
                         <thead>
                             <tr style="background-color:#f2f2f2;">
+
                                 <th>Code</th>
                                 <th>Type</th>
                                 <th>Owner</th>
@@ -34,11 +35,20 @@
                                 <th>Address</th>
                                 <th>Floor</th>
                                 <th>Area</th>
+
                                 <th>Price</th>
-                                <th>Payment</th>
+                                <th>Owner Price</th>
+                                <th>Commission</th>
+
+                                <th>Paid</th>
+                                <th>Remaining</th>
+
+                                <th>Profit</th>
                                 <th>Status</th>
+
                             </tr>
                         </thead>
+
 
                         <tbody>
 
@@ -57,11 +67,11 @@
                                 </td>
 
                                 <td>
-                                    <span t-field="o.governorate"/>
+                                    <span t-field="o.governorate_id.name"/>
                                 </td>
 
                                 <td>
-                                    <span t-field="o.address"/>
+                                    <span t-field="o.address_id.name"/>
                                 </td>
 
                                 <td>
@@ -72,12 +82,29 @@
                                     <span t-field="o.area_size"/>
                                 </td>
 
+
                                 <td>
                                     <span t-field="o.price"/>
                                 </td>
 
                                 <td>
-                                    <span t-field="o.payment_type"/>
+                                    <span t-field="o.owner_price"/>
+                                </td>
+
+                                <td>
+                                    <span t-field="o.commission"/>
+                                </td>
+
+                                <td>
+                                    <span t-field="o.paid_to_owner"/>
+                                </td>
+
+                                <td>
+                                    <span t-field="o.remaining_to_owner"/>
+                                </td>
+
+                                <td>
+                                    <span t-field="o.profit"/>
                                 </td>
 
                                 <td>
@@ -90,13 +117,23 @@
 
                     </table>
 
+
                     <br/>
 
                     <div style="text-align:right;">
+
                         <strong>
                             Total Properties:
                             <span t-esc="len(docs)"/>
                         </strong>
+
+                        <br/>
+
+                        <strong>
+                            Total Profit:
+                            <span t-esc="sum(docs.mapped('profit'))"/>
+                        </strong>
+
                     </div>
 
                 </div>

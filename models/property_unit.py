@@ -39,11 +39,36 @@ class PropertyUnit(models.Model):
     image = fields.Image(string='Image', tracking=True)
     owner_id = fields.Many2one('property.owner', string='Owner', tracking=True)
 
+    owner_price = fields.Float(string="Owner Price")
+    commission = fields.Float(string="Commission")
+
+    paid_to_owner = fields.Float(string="Paid to Owner")
+    paid_to_owner_date = fields.Date(string="Payment Date")
+    remaining_to_owner = fields.Float(
+        string="Remaining Amount",
+        compute="_compute_remaining",
+        store=True
+    )
+    profit = fields.Float(
+        string="Profit",
+        compute="_compute_profit",
+        store=True
+    )
     _sql_constraints = [
         ('unique_property_code',
          'unique(property_code)',
          'Property code must be unique!')
     ]
+
+    @api.depends('owner_price', 'paid_to_owner')
+    def _compute_remaining(self):
+        for rec in self:
+            rec.remaining_to_owner = rec.owner_price - rec.paid_to_owner
+
+    @api.depends('price', 'owner_price', 'commission')
+    def _compute_profit(self):
+        for rec in self:
+            rec.profit = rec.price - rec.owner_price - rec.commission
 
     @api.constrains('address_id', 'floor', 'area_size')
     def _check_duplicate(self):

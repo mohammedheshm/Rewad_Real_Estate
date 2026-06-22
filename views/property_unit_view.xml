@@ -72,6 +72,23 @@
                             <field name="area_size"/>
                             <field name="floor"/>
                         </group>
+
+                        <group string="Property Financials">
+
+                            <group>
+                                <field name="owner_price"/>
+                                <field name="commission"/>
+                            </group>
+
+                            <group>
+                                <field name="paid_to_owner"/>
+                                <field name="paid_to_owner_date"/>
+                                <field name="remaining_to_owner" readonly="1"/>
+                                <field name="profit"/>
+                            </group>
+
+                        </group>
+
                     </group>
 
                     <notebook>

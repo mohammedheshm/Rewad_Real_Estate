@@ -54,11 +54,25 @@ class PropertyUnit(models.Model):
         compute="_compute_profit",
         store=True
     )
+
+    posted_by_id = fields.Many2one(
+        'res.users',
+        string="Posted By (Sales Agent)"
+    )
+
+    posted_date = fields.Date(string="Posted Date")
+    due_payment_date = fields.Date(string="Due Payment Date")
     _sql_constraints = [
         ('unique_property_code',
          'unique(property_code)',
          'Property code must be unique!')
     ]
+
+    @api.model
+    def default_get(self, fields):
+        res = super().default_get(fields)
+        res['posted_by_id'] = self.env.user.id
+        return res
 
     @api.depends('owner_price', 'paid_to_owner')
     def _compute_remaining(self):
@@ -147,3 +161,63 @@ class PropertyUnit(models.Model):
             'view_mode': 'form',
             'target': 'new',
         }
+
+    def action_create_due_payment_reminder(self):
+
+        activity_type = self.env.ref('mail.mail_activity_data_todo')
+        model_id = self.env['ir.model']._get('property.unit').id
+
+        for rec in self:
+
+            # =========================
+            # 1. Prevent duplicates
+            # =========================
+            existing_activity = self.env['mail.activity'].search([
+                ('res_model_id', '=', model_id),
+                ('res_id', '=', rec.id),
+                ('summary', '=', '💰 Owner Payment Due Reminder'),
+            ], limit=1)
+
+            if not existing_activity:
+                # =========================
+                # 2. Create Activity
+                # =========================
+                self.env['mail.activity'].create({
+                    'activity_type_id': activity_type.id,
+                    'res_model_id': model_id,
+                    'res_id': rec.id,
+                    'summary': '💰 Owner Payment Due Reminder',
+                    'note': (
+                        f"Payment is due for property: {rec.property_code}\n"
+                        f"Amount: {rec.owner_price}\n"
+                        f"Due Date: {rec.due_payment_date}"
+                    ),
+                    'user_id': rec.posted_by_id.id or self.env.user.id,
+                    'date_deadline': rec.due_payment_date,
+                })
+
+            # =========================
+            # 3. Notification (Bell + Chatter)
+            # =========================
+            rec.message_post(
+                body=f"""
+                    <b>💰 Owner Payment Due Reminder</b><br/>
+                    Property: {rec.property_code}<br/>
+                    Amount: {rec.owner_price}<br/>
+                    Due Date: {rec.due_payment_date}
+                """,
+                partner_ids=[rec.posted_by_id.partner_id.id] if rec.posted_by_id else [],
+                message_type='notification',
+            )
+
+    @api.model
+    def _cron_due_payment_reminders(self):
+
+        today = fields.Date.today()
+
+        records = self.search([
+            ('due_payment_date', '=', today)
+        ])
+
+        for rec in records:
+            rec.action_create_due_payment_reminder()

@@ -1,5 +1,5 @@
 {
-    'name': "Rewad Real estate App",
+    'name': "El-Rowad Real Estate",
     'author': "Mohammed Hesham",
     'category': '',
     'version': '17.0.0.1.0',
@@ -21,4 +21,5 @@
 
     ],
     'application': True,
+    'images': ['static/description/icon.png'],
 }

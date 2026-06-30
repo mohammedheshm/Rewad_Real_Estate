@@ -1,0 +1,927 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* rewad_real_estate
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-30 15:38+0000\n"
+"PO-Revision-Date: 2026-06-30 19:31+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: rewad_real_estate
+#: model:res.groups,name:rewad_real_estate.group_real_estate_accountant
+msgid "Accountant"
+msgstr "المحاسب"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_needaction
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_needaction
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_needaction
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_exception_decoration
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_exception_decoration
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_exception_decoration
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_state
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_state
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_state
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_type_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_type_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_type_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__address_id
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_location__type__address
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Address"
+msgstr "العنوان"
+
+#. module: rewad_real_estate
+#: model:res.groups,name:rewad_real_estate.group_real_estate_admin
+msgid "Administration"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__apartment
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__apartment
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Apartment"
+msgstr "الوحدة"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "Area"
+msgstr "المساحة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__area_size
+msgid "Area Size (sqm)"
+msgstr "المساحة بالمتر مربع"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_attachment_count
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_attachment_count
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_attachment_count
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__status__available
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Available"
+msgstr "متاح"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__budget
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Budget"
+msgstr "الميزانية "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_price_search_wizard_form
+msgid "Cancel"
+msgstr "الغى"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__payment_type__cash
+msgid "Cash"
+msgstr "نقدى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__status__closed
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "Closed"
+msgstr "اغلقت"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Code"
+msgstr "كود الوحدة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__commission
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Commission"
+msgstr "العمولة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__status__contacted
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "Contacted"
+msgstr "تم الاتصال بالعميل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__create_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__create_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__create_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__create_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__create_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__create_uid
+msgid "Created by"
+msgstr "تم انشاؤها بواسطة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__create_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__create_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__create_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__create_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__create_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__create_date
+msgid "Created on"
+msgstr "تم انشاؤها فى "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+msgid "Customer"
+msgstr "العميل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__name
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Customer Name"
+msgstr "اسم العميل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__display_name
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__display_name
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__display_name
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__display_name
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__display_name
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__due_payment_date
+msgid "Due Payment Date"
+msgstr "تاريخ معاد الدفع "
+
+#. module: rewad_real_estate
+#: model:ir.actions.server,name:rewad_real_estate.ir_cron_due_payment_reminder_ir_actions_server
+msgid "Due Payment Reminder"
+msgstr "تذكرة بمعاد الدفع "
+
+#. module: rewad_real_estate
+#: model:ir.ui.menu,name:rewad_real_estate.menu_real_estate_root
+msgid "El-Rowad Real Estate "
+msgstr "الرواد للتسويق العقارى"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_owner_form
+msgid "Financial Info"
+msgstr "المعلومات المالية "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__floor
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Floor"
+msgstr "الدور"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__follow_up_date
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+msgid "Follow Up Date"
+msgstr "تاريخ المتابعة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__follow_up_notes
+msgid "Follow Up Notes"
+msgstr "ملاحظات المتابعة "
+
+#. module: rewad_real_estate
+#: model:ir.actions.report,name:rewad_real_estate.action_followup_report
+msgid "Follow Up Report"
+msgstr "تقرير المتابعة "
+
+#. module: rewad_real_estate
+#: model:ir.actions.act_window,name:rewad_real_estate.action_property_followup
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__followup_ids
+#: model:ir.ui.menu,name:rewad_real_estate.all_property_followup
+#: model:ir.ui.menu,name:rewad_real_estate.menu_property_followup
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+msgid "Follow Ups"
+msgstr "المتابعة "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+msgid "Follow-Up Report"
+msgstr "تقرير المتابعة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_follower_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_follower_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_follower_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_partner_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_partner_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_partner_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__activity_type_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__activity_type_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__activity_type_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__governorate_id
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_location__type__governorate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Governorate"
+msgstr "المحافظة "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_followup_search
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Group By"
+msgstr "تجميع بواسطة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__has_message
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__has_message
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__has_message
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__id
+msgid "ID"
+msgstr "الرقم القومى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_exception_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_exception_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_exception_icon
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__activity_exception_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__activity_exception_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__activity_exception_icon
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__message_needaction
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__message_needaction
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__message_needaction
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__message_has_error
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__message_has_error
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__message_has_error
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__image
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Image"
+msgstr "الصورة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__payment_type__installment
+msgid "Installment"
+msgstr "تقسيط "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__status__interested
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "Interested"
+msgstr "مهتم "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_is_follower
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_is_follower
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_is_follower
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__land
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__land
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Land"
+msgstr "ارص"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__write_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__write_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__write_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__write_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__write_uid
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__write_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__write_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__write_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__write_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__write_date
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__write_date
+msgid "Last Updated on"
+msgstr "اخر تعديل فى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__lead_id
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_followup_search
+msgid "Lead"
+msgstr "عميل محتمل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__lead_code
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Lead Code"
+msgstr "كود العميل المحتمل"
+
+#. module: rewad_real_estate
+#: model:ir.actions.report,name:rewad_real_estate.action_lead_report
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Lead Report"
+msgstr "تقرير العميل المحتمل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__status
+msgid "Lead Status"
+msgstr "حالة العميل المحتمل "
+
+#. module: rewad_real_estate
+#: model:ir.actions.act_window,name:rewad_real_estate.action_property_lead
+#: model:ir.ui.menu,name:rewad_real_estate.all_property_Leads
+#: model:ir.ui.menu,name:rewad_real_estate.menu_property_lead
+msgid "Leads"
+msgstr "العملاء المحتملين"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Location"
+msgstr "الموقع"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+msgid "Mark As Sold"
+msgstr "تم وضع علامة (مباع)"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Marketing"
+msgstr "التسويق"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_has_error
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_has_error
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_has_error
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_ids
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Mobile"
+msgstr "الهاتف"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__mobile
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__mobile
+msgid "Mobile Number"
+msgstr "رقم الهاتف "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__my_activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__my_activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__my_activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__status__new
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "New"
+msgstr "جديد"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_date_deadline
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_summary
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_summary
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_summary
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_type_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_type_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_type_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+msgid "Next Follow Up"
+msgstr "المتابعة القادمة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__next_follow_up_date
+msgid "Next Follow Up Date"
+msgstr "تاريخ المتابعة القادمة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__status__not_interested
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+msgid "Not Interested"
+msgstr "غير مهتم "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__notes
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__notes
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__notes
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_owner_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Notes"
+msgstr "ملاحظات "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_needaction_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_needaction_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_needaction_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_has_error_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__message_has_error_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__message_has_error_counter
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__message_needaction_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__message_needaction_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__message_needaction_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__message_has_error_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__message_has_error_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__message_has_error_counter
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__office
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__office
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Office"
+msgstr "مكتب"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__owner_id
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Owner"
+msgstr "المالك "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__name
+msgid "Owner Name"
+msgstr "اسم المالك "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__owner_price
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Owner Price"
+msgstr "السعر المعروض من المالك "
+
+#. module: rewad_real_estate
+#: model:ir.actions.act_window,name:rewad_real_estate.action_property_owner
+#: model:ir.ui.menu,name:rewad_real_estate.all_property_owners
+#: model:ir.ui.menu,name:rewad_real_estate.menu_property_owner
+msgid "Owners"
+msgstr "الملاك"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Paid"
+msgstr "تم الدفع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner
+msgid "Paid to Owner"
+msgstr "ما تم دفعه للمالك "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__payment_type
+msgid "Payment Type"
+msgstr "نوع الدفع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__posted_by_id
+msgid "Posted By (Sales Agent)"
+msgstr "تم نشرها بواسطة (مندوب المبيعات )"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__posted_date
+msgid "Posted Date"
+msgstr "تاريخ النشر على مواقع التواصل "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__price
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Price"
+msgstr "السعر "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Price Above 2M"
+msgstr "السعر فوق 2 مليون جنية "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__price_from
+msgid "Price From"
+msgstr "السعر من"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__price_to
+msgid "Price To"
+msgstr "السعر الى "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Price between 1M - 2M"
+msgstr "السعر ما بين 1 مليون - 2 مليون"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Price under 1M"
+msgstr "السعر تحت المليون "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__profit
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Profit"
+msgstr "الربح"
+
+#. module: rewad_real_estate
+#: model:ir.actions.act_window,name:rewad_real_estate.action_property_unit
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__property_ids
+#: model:ir.ui.menu,name:rewad_real_estate.all_property_unit
+#: model:ir.ui.menu,name:rewad_real_estate.menu_property_unit
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_owner_form
+msgid "Properties"
+msgstr "الوحدات "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__property_code
+msgid "Property Code"
+msgstr "كود الوحدة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__property_count
+msgid "Property Count"
+msgstr "عدد الوحدات "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Property Financials"
+msgstr "الماليات الخاصة بالوحدات"
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_followup
+msgid "Property Follow Up"
+msgstr "متابعة الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_lead
+msgid "Property Lead"
+msgstr "العميل المحتمل للوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_location
+msgid "Property Location"
+msgstr "موقع الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_owner
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_owner_form
+msgid "Property Owner"
+msgstr "مالك الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_price_search_wizard
+msgid "Property Price Search Wizard"
+msgstr "فلترة الوحدات على حسب السعر "
+
+#. module: rewad_real_estate
+#: model:ir.actions.report,name:rewad_real_estate.action_property_report
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Property Report"
+msgstr "تقرير الوحدة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__property_type
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Property Type"
+msgstr "نوع الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model,name:rewad_real_estate.model_property_unit
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Property Unit"
+msgstr "وحدة عقارية "
+
+#. module: rewad_real_estate
+#: model:ir.model.constraint,message:rewad_real_estate.constraint_property_unit_unique_property_code
+msgid "Property code must be unique!"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.module.category,name:rewad_real_estate.module_category_real_estate
+msgid "Real Estate Management"
+msgstr "ادارة العقارات "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Remaining"
+msgstr "المتبقى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_to_owner
+msgid "Remaining Amount"
+msgstr "كمية المتبقى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__required_area
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Required Area"
+msgstr "المساحة المطلوبة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__property_type
+msgid "Required Property Type"
+msgstr "نوع الوحدة المطلوبة "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Reserve"
+msgstr "احجز"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__status__reserved
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Reserved"
+msgstr "تم الحجز "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Reset"
+msgstr "اعادة ظبط الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_user_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__activity_user_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__activity_user_id
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "SOLD"
+msgstr "تم البيع "
+
+#. module: rewad_real_estate
+#: model:res.groups,name:rewad_real_estate.group_real_estate_sales
+msgid "Sales Agent"
+msgstr "مندوب المبيعات "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_price_search_wizard_form
+msgid "Search"
+msgstr "بحث"
+
+#. module: rewad_real_estate
+#: model:ir.actions.server,name:rewad_real_estate.action_search_by_price_wizard
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_price_search_wizard_form
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Search by Price"
+msgstr "بحث بالسعر "
+
+#. module: rewad_real_estate
+#: model:ir.module.category,description:rewad_real_estate.module_category_real_estate
+msgid "Security access control for real estate system"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__property_unit_id
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Selected Property"
+msgstr "الوحدة المختارة "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
+msgid "Sell"
+msgstr "بيع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__shop
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__shop
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Shop"
+msgstr "محل"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__status__sold
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Sold"
+msgstr "تم البيع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__status
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Status"
+msgstr "الحالة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__activity_state
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__activity_state
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__activity_state
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_followup_search
+msgid "Today"
+msgstr "اليوم"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_commission
+msgid "Total Commission"
+msgstr "العمولة بالكامل"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
+msgid "Total Follow-Ups:"
+msgstr "مجموع المتابعات "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
+msgid "Total Leads:"
+msgstr "مجموع العملاء المحتملين "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
+msgid "Total Paid"
+msgstr "محموع ما تم دفعه "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Total Profit:"
+msgstr "مجموع صافى الربح"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_value
+msgid "Total Properties Value"
+msgstr "مجموع قيمة الوحدات "
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Total Properties:"
+msgstr "مجموع الوحدات "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_remaining
+msgid "Total Remaining"
+msgstr "مجموع المتبقى "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_location__type
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Type"
+msgstr "النوع "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,help:rewad_real_estate.field_property_followup__activity_exception_decoration
+#: model:ir.model.fields,help:rewad_real_estate.field_property_lead__activity_exception_decoration
+#: model:ir.model.fields,help:rewad_real_estate.field_property_owner__activity_exception_decoration
+#: model:ir.model.fields,help:rewad_real_estate.field_property_unit__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__villa
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__villa
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
+msgid "Villa"
+msgstr "فيلا"

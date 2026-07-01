@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 15:38+0000\n"
-"PO-Revision-Date: 2026-06-30 15:38+0000\n"
+"POT-Creation-Date: 2026-07-01 16:37+0000\n"
+"PO-Revision-Date: 2026-07-01 16:37+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -268,9 +268,18 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_for__rent
+msgid "For Rent"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_for__sale
+msgid "For Sale"
+msgstr ""
+
+#. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__governorate_id
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_location__type__governorate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Governorate"
 msgstr ""
@@ -692,6 +701,11 @@ msgid "Property Follow Up"
 msgstr ""
 
 #. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__property_for
+msgid "Property For"
+msgstr ""
+
+#. module: rewad_real_estate
 #: model:ir.model,name:rewad_real_estate.model_property_lead
 msgid "Property Lead"
 msgstr ""
@@ -923,4 +937,9 @@ msgstr ""
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__villa
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Villa"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "property for"
 msgstr ""

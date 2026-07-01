@@ -31,7 +31,7 @@
                                 <th>Code</th>
                                 <th>Type</th>
                                 <th>Owner</th>
-                                <th>Governorate</th>
+                                <th>property for</th>
                                 <th>Address</th>
                                 <th>Floor</th>
                                 <th>Area</th>
@@ -67,7 +67,7 @@
                                 </td>
 
                                 <td>
-                                    <span t-field="o.governorate_id.name"/>
+                                    <span t-field="o.property_for"/>
                                 </td>
 
                                 <td>

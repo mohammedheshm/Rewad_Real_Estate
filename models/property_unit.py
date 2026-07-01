@@ -1,3 +1,5 @@
+import string
+
 from odoo import fields, models, api
 from odoo.exceptions import ValidationError
 
@@ -9,6 +11,10 @@ class PropertyUnit(models.Model):
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     property_code = fields.Char(string='Property Code', readonly=True, copy=False, default='New')
+    property_for = fields.Selection([
+        ('rent', 'For Rent'),
+        ('sale', 'For Sale'),
+    ], string="Property For", tracking=True, required=True)
     property_type = fields.Selection([
         ('apartment', 'Apartment'),
         ('villa', 'Villa'),
@@ -19,7 +25,8 @@ class PropertyUnit(models.Model):
     # governorate = fields.Char(string='Governorate', tracking=True)
     # address = fields.Char(string='Address', tracking=True)
 
-    governorate_id = fields.Many2one('property.location', string='Governorate', domain=[('type', '=', 'governorate')])
+    governorate_id = fields.Many2one('property.location', string='Governorate', domain=[('type', '=', 'governorate')],
+                                     invisible=True)
 
     address_id = fields.Many2one('property.location', string='Address', domain=[('type', '=', 'address')])
 
@@ -62,6 +69,7 @@ class PropertyUnit(models.Model):
 
     posted_date = fields.Date(string="Posted Date")
     due_payment_date = fields.Date(string="Due Payment Date")
+
     _sql_constraints = [
         ('unique_property_code',
          'unique(property_code)',
@@ -97,7 +105,7 @@ class PropertyUnit(models.Model):
 
             if duplicate:
                 raise ValidationError(
-                    "⚠️ Similar property already exists. Please check existing records."
+                    "⚠️ يوجد عقار مشابه بالفعل. يرجى مراجعة السجلات الموجودة."
                 )
 
     @api.model_create_multi

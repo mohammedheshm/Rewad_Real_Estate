@@ -6,10 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-30 15:38+0000\n"
-"PO-Revision-Date: 2026-06-30 19:31+0300\n"
+"POT-Creation-Date: 2026-07-01 16:38+0000\n"
+"PO-Revision-Date: 2026-07-01 19:44+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -79,7 +80,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__apartment
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Apartment"
-msgstr "الوحدة"
+msgstr "شقة سكنية"
 
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
@@ -170,7 +171,7 @@ msgstr "تم انشاؤها فى "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
 msgid "Customer"
-msgstr "العميل "
+msgstr "العميل"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__name
@@ -206,7 +207,7 @@ msgstr "الرواد للتسويق العقارى"
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_owner_form
 msgid "Financial Info"
-msgstr "المعلومات المالية "
+msgstr "المعلومات المالية"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__floor
@@ -242,7 +243,7 @@ msgstr "المتابعة "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
 msgid "Follow-Up Report"
-msgstr "تقرير المتابعة "
+msgstr "تقرير المتابعة"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__message_follower_ids
@@ -269,9 +270,18 @@ msgid "Font awesome icon e.g. fa-tasks"
 msgstr ""
 
 #. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_for__rent
+msgid "For Rent"
+msgstr "إيجار"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_for__sale
+msgid "For Sale"
+msgstr "ملك"
+
+#. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__governorate_id
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_location__type__governorate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Governorate"
 msgstr "المحافظة "
@@ -281,7 +291,7 @@ msgstr "المحافظة "
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_lead_search
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Group By"
-msgstr "تجميع بواسطة "
+msgstr "تجميع بواسطة"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__has_message
@@ -568,7 +578,7 @@ msgstr ""
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_unit__property_type__office
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Office"
-msgstr "مكتب"
+msgstr "شقة إداري"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__owner_id
@@ -598,7 +608,7 @@ msgstr "الملاك"
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Paid"
-msgstr "تم الدفع "
+msgstr "تم الدفع"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner
@@ -635,7 +645,7 @@ msgstr "السعر "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Price Above 2M"
-msgstr "السعر فوق 2 مليون جنية "
+msgstr "السعر فوق 2 مليون جنية"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__price_from
@@ -655,7 +665,7 @@ msgstr "السعر ما بين 1 مليون - 2 مليون"
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Price under 1M"
-msgstr "السعر تحت المليون "
+msgstr "السعر تحت المليون"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__profit
@@ -691,6 +701,11 @@ msgstr "الماليات الخاصة بالوحدات"
 #: model:ir.model,name:rewad_real_estate.model_property_followup
 msgid "Property Follow Up"
 msgstr "متابعة الوحدة "
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__property_for
+msgid "Property For"
+msgstr "غرض الوحدة"
 
 #. module: rewad_real_estate
 #: model:ir.model,name:rewad_real_estate.model_property_lead
@@ -746,7 +761,7 @@ msgstr "ادارة العقارات "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Remaining"
-msgstr "المتبقى "
+msgstr "المتبقى"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_to_owner
@@ -778,7 +793,7 @@ msgstr "تم الحجز "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
 msgid "Reset"
-msgstr "اعادة ظبط الوحدة "
+msgstr "اعادة ظبط الوحدة"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_followup__activity_user_id
@@ -791,7 +806,7 @@ msgstr "المستخدم المسؤول "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
 msgid "SOLD"
-msgstr "تم البيع "
+msgstr "تم البيع"
 
 #. module: rewad_real_estate
 #: model:res.groups,name:rewad_real_estate.group_real_estate_sales
@@ -824,7 +839,7 @@ msgstr "الوحدة المختارة "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_form
 msgid "Sell"
-msgstr "بيع "
+msgstr "بيع"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields.selection,name:rewad_real_estate.selection__property_lead__property_type__shop
@@ -873,12 +888,12 @@ msgstr "العمولة بالكامل"
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.followup_report_template
 msgid "Total Follow-Ups:"
-msgstr "مجموع المتابعات "
+msgstr "مجموع المتابعات"
 
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.lead_report_template
 msgid "Total Leads:"
-msgstr "مجموع العملاء المحتملين "
+msgstr "مجموع العملاء المحتملين"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
@@ -898,7 +913,7 @@ msgstr "مجموع قيمة الوحدات "
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Total Properties:"
-msgstr "مجموع الوحدات "
+msgstr "مجموع الوحدات"
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_remaining
@@ -925,3 +940,8 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Villa"
 msgstr "فيلا"
+
+#. module: rewad_real_estate
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "property for"
+msgstr "غرض الوحدة"

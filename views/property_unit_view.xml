@@ -7,8 +7,8 @@
             <tree>
                 <field name="property_code"/>
                 <field name="property_type"/>
+                <field name="property_for"/>
                 <field name="owner_id"/>
-                <field name="governorate_id"/>
                 <field name="address_id"/>
                 <field name="area_size"/>
                 <field name="price"/>
@@ -71,6 +71,7 @@
                             <field name="payment_type"/>
                             <field name="area_size"/>
                             <field name="floor"/>
+                            <field name="property_for"/>
                         </group>
                         <group string="Marketing">
                             <field name="posted_by_id" readonly="1"/>
@@ -101,7 +102,7 @@
                         <page string="Location">
 
                             <group>
-                                <field name="governorate_id"/>
+                                <field name="governorate_id" invisible='1'/>
                                 <field name="address_id"/>
                             </group>
 

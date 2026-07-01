@@ -37,13 +37,11 @@
                                 <th>Area</th>
 
                                 <th>Price</th>
-                                <th>Owner Price</th>
                                 <th>Commission</th>
 
-                                <th>Paid</th>
+                                <th>Received</th>
                                 <th>Remaining</th>
 
-                                <th>Profit</th>
                                 <th>Status</th>
 
                             </tr>
@@ -87,25 +85,21 @@
                                     <span t-field="o.price"/>
                                 </td>
 
-                                <td>
-                                    <span t-field="o.owner_price"/>
-                                </td>
+
 
                                 <td>
                                     <span t-field="o.commission"/>
                                 </td>
 
                                 <td>
-                                    <span t-field="o.paid_to_owner"/>
+                                    <span t-field="o.received_commission"/>
                                 </td>
 
                                 <td>
-                                    <span t-field="o.remaining_to_owner"/>
+                                    <span t-field="o.remaining_commission"/>
                                 </td>
 
-                                <td>
-                                    <span t-field="o.profit"/>
-                                </td>
+
 
                                 <td>
                                     <span t-field="o.status"/>
@@ -129,10 +123,7 @@
 
                         <br/>
 
-                        <strong>
-                            Total Profit:
-                            <span t-esc="sum(docs.mapped('profit'))"/>
-                        </strong>
+
 
                     </div>
 

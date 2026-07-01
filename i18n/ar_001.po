@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 16:38+0000\n"
-"PO-Revision-Date: 2026-07-01 19:44+0300\n"
+"POT-Creation-Date: 2026-07-01 18:58+0000\n"
+"PO-Revision-Date: 2026-07-01 22:00+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -188,16 +188,6 @@ msgstr "اسم العميل "
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__display_name
 msgid "Display Name"
 msgstr "الاسم المعروض "
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__due_payment_date
-msgid "Due Payment Date"
-msgstr "تاريخ معاد الدفع "
-
-#. module: rewad_real_estate
-#: model:ir.actions.server,name:rewad_real_estate.ir_cron_due_payment_reminder_ir_actions_server
-msgid "Due Payment Reminder"
-msgstr "تذكرة بمعاد الدفع "
 
 #. module: rewad_real_estate
 #: model:ir.ui.menu,name:rewad_real_estate.menu_real_estate_root
@@ -593,32 +583,11 @@ msgid "Owner Name"
 msgstr "اسم المالك "
 
 #. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__owner_price
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Owner Price"
-msgstr "السعر المعروض من المالك "
-
-#. module: rewad_real_estate
 #: model:ir.actions.act_window,name:rewad_real_estate.action_property_owner
 #: model:ir.ui.menu,name:rewad_real_estate.all_property_owners
 #: model:ir.ui.menu,name:rewad_real_estate.menu_property_owner
 msgid "Owners"
 msgstr "الملاك"
-
-#. module: rewad_real_estate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Paid"
-msgstr "تم الدفع"
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner
-msgid "Paid to Owner"
-msgstr "ما تم دفعه للمالك "
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner_date
-msgid "Payment Date"
-msgstr "تاريخ الدفع "
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__payment_type
@@ -666,12 +635,6 @@ msgstr "السعر ما بين 1 مليون - 2 مليون"
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Price under 1M"
 msgstr "السعر تحت المليون"
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__profit
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Profit"
-msgstr "الربح"
 
 #. module: rewad_real_estate
 #: model:ir.actions.act_window,name:rewad_real_estate.action_property_unit
@@ -759,14 +722,16 @@ msgid "Real Estate Management"
 msgstr "ادارة العقارات "
 
 #. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__received_commission
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Received"
+msgstr "ما تم استلامة"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_commission
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Remaining"
 msgstr "المتبقى"
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_to_owner
-msgid "Remaining Amount"
-msgstr "كمية المتبقى "
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_lead__required_area
@@ -896,24 +861,14 @@ msgid "Total Leads:"
 msgstr "مجموع العملاء المحتملين"
 
 #. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
-msgid "Total Paid"
-msgstr "محموع ما تم دفعه "
-
-#. module: rewad_real_estate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Total Profit:"
-msgstr "مجموع صافى الربح"
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_value
-msgid "Total Properties Value"
-msgstr "مجموع قيمة الوحدات "
-
-#. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Total Properties:"
 msgstr "مجموع الوحدات"
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
+msgid "Total Received"
+msgstr "محموع ما تم دفعه "
 
 #. module: rewad_real_estate
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_remaining

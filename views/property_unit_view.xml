@@ -80,17 +80,11 @@
 
                         <group string="Property Financials">
 
-                            <group>
-                                <field name="owner_price"/>
-                                <field name="commission"/>
-                            </group>
 
                             <group>
-                                <field name="paid_to_owner"/>
-                                <field name="paid_to_owner_date"/>
-                                <field name="remaining_to_owner" readonly="1"/>
-                                <field name="profit"/>
-                                <field name="due_payment_date"/>
+                                <field name="commission"/>
+                                <field name="received_commission"/>
+                                <field name="remaining_commission" readonly="1"/>
                             </group>
 
                         </group>
@@ -288,21 +282,6 @@
         <field name="context">{}</field>
     </record>
 
-
-    <!-- Cron Job -->
-
-    <odoo>
-        <record id="ir_cron_due_payment_reminder" model="ir.cron">
-            <field name="name">Due Payment Reminder</field>
-            <field name="model_id" ref="model_property_unit"/>
-            <field name="state">code</field>
-            <field name="code">model._cron_due_payment_reminders()</field>
-            <field name="interval_number">1</field>
-            <field name="interval_type">days</field>
-            <field name="numbercall">-1</field>
-            <field name="active">True</field>
-        </record>
-    </odoo>
 
     <menuitem
             id="menu_property_unit"

@@ -14,14 +14,14 @@ class PropertyOwner(models.Model):
 
     property_count = fields.Integer(compute="_compute_property_count", tracking=True)
 
-    total_value = fields.Float(
-        string="Total Properties Value",
+    total_commission = fields.Float(
+        string="Total Commission",
         compute="_compute_totals",
         store=True
     )
 
     total_paid = fields.Float(
-        string="Total Paid",
+        string="Total Received",
         compute="_compute_totals",
         store=True
     )
@@ -32,21 +32,16 @@ class PropertyOwner(models.Model):
         store=True
     )
 
-    total_commission = fields.Float(
-        string="Total Commission",
-        compute="_compute_totals",
-        store=True
+    @api.depends(
+        'property_ids.commission',
+        'property_ids.received_commission',
+        'property_ids.remaining_commission'
     )
-
-    @api.depends('property_ids.owner_price',
-                 'property_ids.paid_to_owner',
-                 'property_ids.commission')
     def _compute_totals(self):
         for rec in self:
-            rec.total_value = sum(rec.property_ids.mapped('owner_price'))
-            rec.total_paid = sum(rec.property_ids.mapped('paid_to_owner'))
             rec.total_commission = sum(rec.property_ids.mapped('commission'))
-            rec.total_remaining = rec.total_value - rec.total_paid
+            rec.total_paid = sum(rec.property_ids.mapped('received_commission'))
+            rec.total_remaining = sum(rec.property_ids.mapped('remaining_commission'))
 
     def _compute_property_count(self):
         for rec in self:

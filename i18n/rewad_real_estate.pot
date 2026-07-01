@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-01 16:37+0000\n"
-"PO-Revision-Date: 2026-07-01 16:37+0000\n"
+"POT-Creation-Date: 2026-07-01 18:58+0000\n"
+"PO-Revision-Date: 2026-07-01 18:58+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -185,16 +185,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_price_search_wizard__display_name
 #: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__display_name
 msgid "Display Name"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__due_payment_date
-msgid "Due Payment Date"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.actions.server,name:rewad_real_estate.ir_cron_due_payment_reminder_ir_actions_server
-msgid "Due Payment Reminder"
 msgstr ""
 
 #. module: rewad_real_estate
@@ -591,31 +581,10 @@ msgid "Owner Name"
 msgstr ""
 
 #. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__owner_price
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Owner Price"
-msgstr ""
-
-#. module: rewad_real_estate
 #: model:ir.actions.act_window,name:rewad_real_estate.action_property_owner
 #: model:ir.ui.menu,name:rewad_real_estate.all_property_owners
 #: model:ir.ui.menu,name:rewad_real_estate.menu_property_owner
 msgid "Owners"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Paid"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner
-msgid "Paid to Owner"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__paid_to_owner_date
-msgid "Payment Date"
 msgstr ""
 
 #. module: rewad_real_estate
@@ -663,12 +632,6 @@ msgstr ""
 #. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.view_property_unit_search
 msgid "Price under 1M"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__profit
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Profit"
 msgstr ""
 
 #. module: rewad_real_estate
@@ -757,13 +720,15 @@ msgid "Real Estate Management"
 msgstr ""
 
 #. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__received_commission
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Remaining"
+msgid "Received"
 msgstr ""
 
 #. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_to_owner
-msgid "Remaining Amount"
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_unit__remaining_commission
+#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
+msgid "Remaining"
 msgstr ""
 
 #. module: rewad_real_estate
@@ -894,23 +859,13 @@ msgid "Total Leads:"
 msgstr ""
 
 #. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
-msgid "Total Paid"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
-msgid "Total Profit:"
-msgstr ""
-
-#. module: rewad_real_estate
-#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_value
-msgid "Total Properties Value"
-msgstr ""
-
-#. module: rewad_real_estate
 #: model_terms:ir.ui.view,arch_db:rewad_real_estate.property_report_template
 msgid "Total Properties:"
+msgstr ""
+
+#. module: rewad_real_estate
+#: model:ir.model.fields,field_description:rewad_real_estate.field_property_owner__total_paid
+msgid "Total Received"
 msgstr ""
 
 #. module: rewad_real_estate

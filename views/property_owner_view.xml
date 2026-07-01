@@ -40,11 +40,9 @@
                     <group>
                         <group string="Financial Info">
 
-                            <field name="total_value"/>
+                            <field name="total_commission"/>
                             <field name="total_paid"/>
                             <field name="total_remaining"/>
-                            <field name="total_commission"/>
-
                         </group>
 
                     </group>
